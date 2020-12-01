@@ -9,7 +9,7 @@ public class AntAlgorithm2_0 {
       // Uwaga: Minimalna liczba punktów wyboru to dwa.
       // Przy dwóch punktach wyboru może wystąpić zapętlenie,
       // zwłaszcza w sytuacji, gdy mrówki wracają do mrowiska.
-      // Należy wtedy powtórzyć badanie.
+      // Należy wtedy powtórzyć badanie. lalalallaal
       world.inicjuj();
       Mrowisko m=new Mrowisko(world,15,1); // parametry mrowiska: nazwa świata,
       // liczba mrówek, ilość pozostawianego feromonu przez mrówkę
