@@ -21,6 +21,7 @@ public class AntAlgorithm2_0 {
        m.move(); m.pokaz();
        world.pokaz(); System.out.println();
       }
+      System.out.println("as");
     }
 }
     
