@@ -94,13 +94,16 @@ public class Mrowka {
                sciezka+=polozenie;
                break;
        case 0: syta=true;
-               polozenie=swiat.food;
+               /*polozenie=swiat.food;*/
+
+               /*polej_sciezke();*/
+
+               //sciezka="";
                sciezka+=polozenie;
-               polej_sciezke();
-               /*
-               sciezka="";
                polozenie=swiat.home;
-               */
+
+
+           System.out.println(sciezka+=polozenie);
                break;
        }
     }

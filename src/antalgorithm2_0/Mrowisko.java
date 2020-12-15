@@ -28,7 +28,12 @@ public class Mrowisko {
         // po przesunięciu wykonuje na każdej mrówce metodę "akcja" 
         // z klasy Mrówka
         for(int i=0;i<lmr;i++)
-         if(! ants[i].syta)ants[i].akcja();
+        {
+            if (!ants[i].syta) {
+                ants[i].akcja();
+            }
+
+        }
     }
    public void pokaz(){
         for(int i=0;i<lmr;i++)
