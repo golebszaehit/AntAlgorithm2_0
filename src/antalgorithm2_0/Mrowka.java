@@ -48,7 +48,7 @@ public class Mrowka {
         // sprawdza, czy w sciezce występuje podany znak,
         boolean jest=false; int i=0;
         while((!jest)&&(i<sciezka.length()))
-         if(sciezka.charAt(i)==znak)jest=true; else i++;
+            if(sciezka.charAt(i)==znak)jest=true; else i++;
         return jest;
     }
     private int losuj(){
@@ -77,7 +77,7 @@ public class Mrowka {
         sortuj_tablice_pomocnicza();
         int wybor; boolean zly_wybor;
       do{ 
-         wybor=ruletka();// wybór kolejnego punktu przy pomocy ruletki
+         wybor=ruletka();// wybór kolejnego punktu przy pomocy ruletki/losuj
          zly_wybor=sprawdz_sciezke(swiat.aux[wybor].name);
       }while(zly_wybor);
     return wybor;
