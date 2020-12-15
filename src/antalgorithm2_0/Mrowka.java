@@ -92,15 +92,19 @@ public class Mrowka {
      switch (valor)
      { case 1: polozenie=swiat.aux[index].name;
                sciezka+=polozenie;
+                //System.out.println("case 1: " + valor);
                break;
        case 0: syta=true;
-               polozenie=swiat.food;
-               sciezka+=polozenie;
-               polej_sciezke();
-               /*
-               sciezka="";
-               polozenie=swiat.home;
-               */
+               /*polozenie=swiat.food;
+               sciezka+=polozenie;*/
+
+                sciezka+=polozenie;
+                //sciezka="";
+                polozenie=swiat.home;
+
+               //polej_sciezke();
+                //System.out.println("case 0: " + valor);
+                //System.out.println(sciezka+=polozenie);
                break;
        }
     }
