@@ -1,7 +1,10 @@
 
 package antalgorithm2_0;
 
+
 public class Mrowisko {
+
+    public World a;
     private int lmr;              // liczba mrówek w mrowisku
     private Mrowka ants[];        // tablica mrówek
     public Mrowisko(World swiat, int _lmr, float _fer){

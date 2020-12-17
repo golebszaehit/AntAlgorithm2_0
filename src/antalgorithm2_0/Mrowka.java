@@ -84,7 +84,7 @@ public class Mrowka {
     }
     public void akcja(){
         // sprawdza, czy mrówka osiągnęła pokarm,
-        // jeśli NIE - dopisuje osiągnięty punkt do jej ścieżki
+        // jeśli NIE - dopisuje osiągnięt y punkt do jej ścieżki
         // jeśli TAK - dodaje do każdego punktu  na ścieżce feromon,
         //             i "usypia" mrówkę za pomocą "syta=true"
         int index=wybierz_punkt();
@@ -94,18 +94,22 @@ public class Mrowka {
                sciezka+=polozenie;
                break;
        case 0: syta=true;
-               /*polozenie=swiat.food;*/
+               polozenie=swiat.food;
 
-               /*polej_sciezke();*/
 
-               //sciezka="";
+
                sciezka+=polozenie;
-               polozenie=swiat.home;
+               polej_sciezke();
+
+               /*sciezka="";
+               polozenie=swiat.home;*/
 
 
-           System.out.println(sciezka+=polozenie);
-               break;
-       }
+           /*System.out.println(sciezka+=polozenie)*/;
+
+           break;
+
+     }
     }
     void polej_sciezke(){
         // akcja wykonywana na punktach świata należących
