@@ -94,29 +94,37 @@ public class Mrowka {
                sciezka+=polozenie;
                break;
        case 0: syta=true;
-               polozenie=swiat.food;
+               //polozenie=swiat.food;
 
 
-
-               sciezka+=polozenie;
+               swiat.hmfood = swiat.hmfood-1;
+               sciezka="";
                polej_sciezke();
+               polozenie=swiat.home;
+               sciezka+=polozenie;
+
 
                /*sciezka="";
                polozenie=swiat.home;*/
 
 
-           /*System.out.println(sciezka+=polozenie)*/;
+           System.out.println(sciezka+=polozenie);
+           System.out.println();
 
            break;
 
      }
     }
-    void polej_sciezke(){
+    void polej_sciezke() {
         // akcja wykonywana na punktach świata należących
         // do ścieżki tej mrówki, która doszła do pokarmu
-        for(int i=0;i<sciezka.length();i++)
-         if(sciezka.charAt(i)!=swiat.home)
-            swiat.punkty[sciezka.charAt(i)-'a'].ferom+=feromon;
+        for (int i = 0; i < sciezka.length(); i++) {
+            if (sciezka.charAt(i) != swiat.home) {
+                swiat.punkty[sciezka.charAt(i) - 'a'].ferom += feromon;
+            } else if () {
+                swiat.punkty[sciezka.charAt(i) - 'a'].ferom += feromon - 2;
+            }
+        }
     }
     public void pokaz(){
         if(syta)System.out.print("syta ");else System.out.print("     ");

@@ -11,10 +11,11 @@ public int lp;         // liczba punkt�w �wiata
         public char home;      // nazwa punktu mrowiska
         public char food;      // nazwa punktu zawieraj�cego pokarm
         public int lpw;        // liczba punkt�w wyboru dla mr�wek
+        public int hmfood;     // ilość pokarmu
         int tabela[][]={{'a',6,1},{'b',13,1},{'c',4,3},{'d',4,5},{'e',8,5},
                         {'f',6,8,},{'g',10,8}}; //konfiguracja �wiata     
-        public World(int _lp, char _home, char _food, int _lpw){
-            lp=_lp; home=_home; food=_food; lpw=_lpw;
+        public World(int _lp, char _home, char _food, int _lpw, int _hmfood){
+            lp=_lp; home=_home; food=_food; lpw=_lpw; hmfood=_hmfood;
             punkty=new Punkt[_lp];
             aux=new Auxil[_lp];
         }
