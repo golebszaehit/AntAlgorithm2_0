@@ -95,29 +95,16 @@ public class Mrowka {
                 //System.out.println("case 1: " + valor);
                break;
        case 0: syta=true;
-<<<<<<< HEAD
                /*polozenie=swiat.food;
-               sciezka+=polozenie;*/
-
-                sciezka+=polozenie;
-                //sciezka="";
-                polozenie=swiat.home;
-
-               //polej_sciezke();
-                //System.out.println("case 0: " + valor);
-                //System.out.println(sciezka+=polozenie);
-               break;
-       }
-=======
-               polozenie=swiat.food;
-
 
 
                sciezka+=polozenie;
-               polej_sciezke();
+               polej_sciezke();*/
 
-               /*sciezka="";
-               polozenie=swiat.home;*/
+               sciezka="";
+               polozenie=swiat.home;
+                polej_sciezke();
+                sciezka+=polozenie;
 
 
            /*System.out.println(sciezka+=polozenie)*/;
@@ -125,7 +112,6 @@ public class Mrowka {
            break;
 
      }
->>>>>>> f1e97438cde8dde48b4043e1268d199268530249
     }
     void polej_sciezke(){
         // akcja wykonywana na punktach świata należących

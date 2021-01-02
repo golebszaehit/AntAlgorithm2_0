@@ -4,11 +4,6 @@ package antalgorithm2_0;
 
 public class World {
 public int lp;         // liczba punkt�w �wiata
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f1e97438cde8dde48b4043e1268d199268530249
         public Punkt punkty[]; // tablica punkt�w �wiata
         public Auxil aux[];      // tablica pomocnicza do oblicze�
         public char home;      // nazwa punktu mrowiska
@@ -33,11 +28,10 @@ public int lp;         // liczba punkt�w �wiata
                aux[i].ratio=0.0;
              }
         }
-<<<<<<< HEAD
-        void ferom_reset( ){
+        /*void ferom_reset( ) {
             // zeruje ilo�� foremonu we wszystkich punktach �wiata
-            for(int i=0;i<lp;i++) punkty[i].ferom=0.0;
-=======
+            for (int i = 0; i < lp; i++) punkty[i].ferom = 0.0;
+        }*/
         public void ferom_reset(){
             // zeruje ilo�� foremonu we wszystkich punktach �wiata// pomniejsza ilość feromonu we wszystkich punktach świata.
             for(int i=0;i<lp;i++) {
@@ -45,7 +39,7 @@ public int lp;         // liczba punkt�w �wiata
                     punkty[i].ferom = punkty[i].ferom - i;
                 }
             }
->>>>>>> f1e97438cde8dde48b4043e1268d199268530249
+
         }
         public void pokaz( ){
             System.out.println();
