@@ -3,7 +3,10 @@ package antalgorithm2_0;
 public class AntAlgorithm2_0 {
 
     public static void main(String[] args) {
+/*<<<<<<< HEAD
        World world=new World(7,'a','g',4);
+=======*/
+       World world=new World(7,'a','g',4, 3);
       // parametry świata: liczba punktów, home, food,
       //                   liczba punktów wyboru dla mrówek
       // Uwaga: Minimalna liczba punktów wyboru to dwa.
@@ -18,7 +21,9 @@ public class AntAlgorithm2_0 {
       world.pokaz(); System.out.println();// świat    - stan początkowy
       for(int i=1;i<=10;i++){
         System.out.println("---------- "+ i +" cykl ----------"); 
-       m.move(); m.pokaz();
+       m.move();
+       m.pokaz();
+       world.ferom_reset();
        world.pokaz(); System.out.println();
       }
     }

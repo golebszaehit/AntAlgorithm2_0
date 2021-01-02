@@ -1,7 +1,10 @@
 
 package antalgorithm2_0;
 
+
 public class Mrowisko {
+
+    public World a;
     private int lmr;              // liczba mrówek w mrowisku
     private Mrowka ants[];        // tablica mrówek
     public Mrowisko(World swiat, int _lmr, float _fer){
@@ -27,8 +30,15 @@ public class Mrowisko {
         // najlepszych z trzech losowo (lub za pomocą ruletki) wybranych,
         // po przesunięciu wykonuje na każdej mrówce metodę "akcja" 
         // z klasy Mrówka
+/*<<<<<<< HEAD
         for(int i=0;i<lmr;i++) {
             if(! ants[i].syta) {
+                ants[i].akcja();
+            }
+=======*/
+        for(int i=0;i<lmr;i++)
+        {
+            if (!ants[i].syta) {
                 ants[i].akcja();
             }
         }

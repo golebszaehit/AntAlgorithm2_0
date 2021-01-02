@@ -3,16 +3,19 @@ package antalgorithm2_0;
 
 
 public class World {
-public int lp;         // liczba punktów œwiata
-        public Punkt punkty[]; // tablica punktów œwiata
-        public Auxil aux[];      // tablica pomocnicza do obliczeñ
+public int lp;         // liczba punktï¿½w ï¿½wiata
+
+
+        public Punkt punkty[]; // tablica punktï¿½w ï¿½wiata
+        public Auxil aux[];      // tablica pomocnicza do obliczeï¿½
         public char home;      // nazwa punktu mrowiska
-        public char food;      // nazwa punktu zawieraj¹cego pokarm
-        public int lpw;        // liczba punktów wyboru dla mrówek
+        public char food;      // nazwa punktu zawierajï¿½cego pokarm
+        public int lpw;        // liczba punktï¿½w wyboru dla mrï¿½wek
+        public int hmfood;     // iloÅ›Ä‡ pokarmu
         int tabela[][]={{'a',6,1},{'b',13,1},{'c',4,3},{'d',4,5},{'e',8,5},
-                        {'f',6,8,},{'g',10,8}}; //konfiguracja œwiata     
-        public World(int _lp, char _home, char _food, int _lpw){
-            lp=_lp; home=_home; food=_food; lpw=_lpw;
+                        {'f',6,8,},{'g',10,8}}; //konfiguracja ï¿½wiata     
+        public World(int _lp, char _home, char _food, int _lpw, int _hmfood){
+            lp=_lp; home=_home; food=_food; lpw=_lpw; hmfood=_hmfood;
             punkty=new Punkt[_lp];
             aux=new Auxil[_lp];
         }
@@ -28,9 +31,13 @@ public int lp;         // liczba punktów œwiata
                aux[i].ratio=0.0;
              }
         }
-        void ferom_reset( ){
-            // zeruje iloœæ foremonu we wszystkich punktach œwiata
-            for(int i=0;i<lp;i++) punkty[i].ferom=0.0;
+        public void ferom_reset(){
+            // zeruje iloï¿½ï¿½ foremonu we wszystkich punktach ï¿½wiata// pomniejsza iloÅ›Ä‡ feromonu we wszystkich punktach Å›wiata.
+            for(int i=0;i<lp;i++) {
+                if (i == punkty[i].ferom || i < punkty[i].ferom) {
+                    punkty[i].ferom = punkty[i].ferom - i;
+                }
+            }
         }
         public void pokaz( ){
             System.out.println();
