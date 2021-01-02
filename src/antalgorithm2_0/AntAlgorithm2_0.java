@@ -17,10 +17,18 @@ public class AntAlgorithm2_0 {
       m.pokaz();                          // mrowisko - stan początkowy
       world.pokaz(); System.out.println();// świat    - stan początkowy
       for(int i=1;i<=10;i++){
+<<<<<<< HEAD
           System.out.println("---------- "+ i +" cykl ----------");
           m.move(); m.pokaz();
           world.pokaz();
           System.out.println();
+=======
+        System.out.println("---------- "+ i +" cykl ----------"); 
+       m.move();
+       m.pokaz();
+       world.ferom_reset();
+       world.pokaz(); System.out.println();
+>>>>>>> f1e97438cde8dde48b4043e1268d199268530249
       }
     }
 }

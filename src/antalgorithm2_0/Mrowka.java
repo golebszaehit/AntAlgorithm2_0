@@ -48,7 +48,7 @@ public class Mrowka {
         // sprawdza, czy w sciezce występuje podany znak,
         boolean jest=false; int i=0;
         while((!jest)&&(i<sciezka.length()))
-         if(sciezka.charAt(i)==znak)jest=true; else i++;
+            if(sciezka.charAt(i)==znak)jest=true; else i++;
         return jest;
     }
     private int losuj(){
@@ -77,14 +77,14 @@ public class Mrowka {
         sortuj_tablice_pomocnicza();
         int wybor; boolean zly_wybor;
       do{ 
-         wybor=ruletka();// wybór kolejnego punktu przy pomocy ruletki
+         wybor=ruletka();// wybór kolejnego punktu przy pomocy ruletki/losuj
          zly_wybor=sprawdz_sciezke(swiat.aux[wybor].name);
       }while(zly_wybor);
     return wybor;
     }
     public void akcja(){
         // sprawdza, czy mrówka osiągnęła pokarm,
-        // jeśli NIE - dopisuje osiągnięty punkt do jej ścieżki
+        // jeśli NIE - dopisuje osiągnięt y punkt do jej ścieżki
         // jeśli TAK - dodaje do każdego punktu  na ścieżce feromon,
         //             i "usypia" mrówkę za pomocą "syta=true"
         int index=wybierz_punkt();
@@ -95,6 +95,7 @@ public class Mrowka {
                 //System.out.println("case 1: " + valor);
                break;
        case 0: syta=true;
+<<<<<<< HEAD
                /*polozenie=swiat.food;
                sciezka+=polozenie;*/
 
@@ -107,6 +108,24 @@ public class Mrowka {
                 //System.out.println(sciezka+=polozenie);
                break;
        }
+=======
+               polozenie=swiat.food;
+
+
+
+               sciezka+=polozenie;
+               polej_sciezke();
+
+               /*sciezka="";
+               polozenie=swiat.home;*/
+
+
+           /*System.out.println(sciezka+=polozenie)*/;
+
+           break;
+
+     }
+>>>>>>> f1e97438cde8dde48b4043e1268d199268530249
     }
     void polej_sciezke(){
         // akcja wykonywana na punktach świata należących
