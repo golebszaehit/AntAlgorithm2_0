@@ -23,4 +23,3 @@ public class AntAlgorithm2_0 {
       }
     }
 }
-    

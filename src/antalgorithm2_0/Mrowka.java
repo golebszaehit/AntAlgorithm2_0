@@ -98,11 +98,11 @@ public class Mrowka {
                /*polozenie=swiat.food;
                sciezka+=polozenie;*/
 
-                sciezka+=polozenie;
-                //sciezka="";
-                polozenie=swiat.home;
+                sciezka="";
+                polej_sciezke();
+           polozenie=swiat.home;
+           sciezka+=polozenie;
 
-               //polej_sciezke();
                 //System.out.println("case 0: " + valor);
                 //System.out.println(sciezka+=polozenie);
                break;
