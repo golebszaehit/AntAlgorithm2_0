@@ -121,7 +121,7 @@ public class Mrowka {
         for (int i = 0; i < sciezka.length(); i++) {
             if (sciezka.charAt(i) != swiat.home) {
                 swiat.punkty[sciezka.charAt(i) - 'a'].ferom += feromon;
-            } else if () {
+            } else if (?) {
                 swiat.punkty[sciezka.charAt(i) - 'a'].ferom += feromon - 2;
             }
         }
