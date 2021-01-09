@@ -8,4 +8,7 @@ public class Punkt {
     public int y; 
     public double ferom;
 
+
+
+
 }
