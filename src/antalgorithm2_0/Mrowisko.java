@@ -30,12 +30,8 @@ public class Mrowisko {
         // najlepszych z trzech losowo (lub za pomocą ruletki) wybranych,
         // po przesunięciu wykonuje na każdej mrówce metodę "akcja" 
         // z klasy Mrówka
-        for(int i=0;i<lmr;i++)
-        {
-            if (!ants[i].syta) {
+        for(int i=0;i<lmr;i++){
                 ants[i].akcja();
-            }
-
         }
     }
    public void pokaz(){

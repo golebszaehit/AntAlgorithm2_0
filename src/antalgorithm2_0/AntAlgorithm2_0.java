@@ -20,7 +20,7 @@ public class AntAlgorithm2_0 {
         System.out.println("---------- "+ i +" cykl ----------"); 
        m.move();
        m.pokaz();
-       world.ferom_reset();
+       //world.ferom_reset();
        world.pokaz(); System.out.println();
       }
     }

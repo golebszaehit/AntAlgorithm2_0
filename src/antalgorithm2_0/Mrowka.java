@@ -94,25 +94,22 @@ public class Mrowka {
                sciezka+=polozenie;
                break;
        case 0:
-           if (swiat.hmfood>0) {syta=true;}
+           //if (swiat.hmfood>0) {syta=true;}
                //polozenie=swiat.food;
+               syta=true;
 
 
-
-               if (swiat.hmfood>=1)
-                   swiat.hmfood = swiat.hmfood-1;
-               sciezka="";
-               polej_sciezke();
-               polozenie=swiat.home;
-               sciezka+=polozenie;
-
-
-               /*sciezka="";
-               polozenie=swiat.home;*/
+               //if (swiat.hmfood>=1)
+                  // swiat.hmfood = swiat.hmfood-1;
+           //System.out.println(sciezka+=polozenie);
+           sciezka="";
+           polej_sciezke();
+           polozenie=swiat.home;
 
 
+           /*polozenie=swiat.home;*/
            System.out.println(sciezka+=polozenie);
-           System.out.println(swiat.hmfood);
+           //System.out.println(swiat.hmfood);
 
            break;
 
