@@ -5,13 +5,13 @@ package antalgorithm2_0;
 public class World {
 public int lp;         // liczba punkt�w �wiata
 
-
         public Punkt punkty[]; // tablica punkt�w �wiata
         public Auxil aux[];      // tablica pomocnicza do oblicze�
         public char home;      // nazwa punktu mrowiska
         public char food;      // nazwa punktu zawieraj�cego pokarm
         public int lpw;        // liczba punkt�w wyboru dla mr�wek
         public int hmfood;     // ilość pokarmu
+    public float feromon;
         int tabela[][]={{'a',6,1},{'b',13,1},{'c',4,3},{'d',4,5},{'e',8,5},
                         {'f',6,8,},{'g',10,8}}; //konfiguracja �wiata     
         public World(int _lp, char _home, char _food, int _lpw){
@@ -34,18 +34,25 @@ public int lp;         // liczba punkt�w �wiata
         public void ferom_reset(){
             // zeruje ilo�� foremonu we wszystkich punktach �wiata// pomniejsza ilość feromonu we wszystkich punktach świata.
             for(int i=0;i<lp;i++) {
+                //System.out.println("punkt: " + punkty[i].name + " | " + "feromon: " + punkty[i].ferom);
+                //System.out.println(punkty[i].ferom);
+                //System.out.println("feromon " + punkty[i].ferom);
                 if (i == punkty[i].ferom || i < punkty[i].ferom) {
-                    punkty[i].ferom = punkty[i].ferom - i;
+                    float procentFeromonu = (float) punkty[i].ferom/2;
+                    procentFeromonu=Math.round(procentFeromonu);
+                    //System.out.println("liczba " + procentFeromonu);
+                    //System.out.println("ferotm " + i);
+                    punkty[i].ferom = punkty[i].ferom - procentFeromonu;
                 }
             }
         }
         public void pokaz( ){
             System.out.println();
             for(int i=0;i<lp;i++)
-              System.out.print((char)punkty[i].name+"   ");
+              System.out.print(punkty[i].name+"   ");
             System.out.println();
             for(int i=0;i<lp;i++)
-              System.out.print((int)punkty[i].ferom+"   ");
+              System.out.print(punkty[i].ferom+"   ");
             System.out.println();
         }    
 }

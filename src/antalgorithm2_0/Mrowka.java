@@ -6,7 +6,7 @@ public class Mrowka {
     public World swiat; 
         // wskazanie świata, do którego należy mrówka
     public char polozenie;
-    public float feromon; 
+    public float feromon;
         // ilość pozostawianego feromonu w punkcie
     boolean syta;
     String sciezka="";
@@ -82,56 +82,34 @@ public class Mrowka {
       }while(zly_wybor);
     return wybor;
     }
+
     public void akcja(){
         // sprawdza, czy mrówka osiągnęła pokarm,
         // jeśli NIE - dopisuje osiągnięt y punkt do jej ścieżki
         // jeśli TAK - dodaje do każdego punktu  na ścieżce feromon,
         //             i "usypia" mrówkę za pomocą "syta=true"
         int index=wybierz_punkt();
-     int valor=(swiat.aux[index].name!=(swiat.food))?1:0;
-     switch (valor)
-     { case 1: polozenie=swiat.aux[index].name;
-               sciezka+=polozenie;
-                //System.out.println("case 1: " + valor);
-               break;
-       case 0: syta=true;
-               polozenie=swiat.food;
-               sciezka+=polozenie;
-
-                sciezka="";
-                polej_sciezke();
-                polozenie=swiat.home;
+        int valor=(swiat.aux[index].name!=(swiat.food))?1:0;
+        switch (valor) {
+            case 1:
+                polozenie=swiat.aux[index].name;
                 sciezka+=polozenie;
-
-                //System.out.println("case 0: " + valor);
-                //System.out.println(sciezka+=polozenie);
-               break;
+                break;
+            case 0:
+                syta=true;
+                /*sciezka="";
+                polej_sciezke();
+                polozenie=swiat.home;*/
+                polozenie=swiat.food;
+                sciezka+=polozenie;
+                polej_sciezke();
+                sciezka="";
+                polozenie=swiat.home;
+                System.out.println(sciezka+=polozenie);
+                break;
        }
-       /*case 0:
-           if (swiat.hmfood>0) {syta=true;}
-               //polozenie=swiat.food;
-
-
-
-               if (swiat.hmfood>=1)
-                   swiat.hmfood = swiat.hmfood-1;
-               sciezka="";
-               polej_sciezke();
-               polozenie=swiat.home;
-               sciezka+=polozenie;
-
-
-               sciezka="";
-               polozenie=swiat.home;
-
-
-           System.out.println(sciezka+=polozenie);
-           System.out.println(swiat.hmfood);
-
-           break;
-
-     }*/
     }
+
     void polej_sciezke() {
         // akcja wykonywana na punktach świata należących
         // do ścieżki tej mrówki, która doszła do pokarmu
