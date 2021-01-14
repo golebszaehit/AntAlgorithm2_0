@@ -6,7 +6,7 @@ public class Mrowka {
     public World swiat; 
         // wskazanie świata, do którego należy mrówka
     public char polozenie;
-    public float feromon; 
+    public float feromon;
         // ilość pozostawianego feromonu w punkcie
     boolean syta;
     String sciezka="";
@@ -107,7 +107,7 @@ public class Mrowka {
            sciezka+=polozenie;
            polej_sciezke();
            sciezka="";
-           //polej_sciezke();
+           polej_sciezke();
            polozenie=swiat.home;
 
 

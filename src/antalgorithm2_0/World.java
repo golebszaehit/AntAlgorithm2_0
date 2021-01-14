@@ -35,9 +35,11 @@ public int lp;         // liczba punkt�w �wiata
             for(int i=0;i<lp;i++) {
                 System.out.println(punkty[i].name + " " + punkty[i].ferom);
                 if (i == punkty[i].ferom || i < punkty[i].ferom) {
-                    double procentferomonu = punkty[i].ferom/2;
-                    procentferomonu=Math.round(procentferomonu);
-                    punkty[i].ferom = punkty[i].ferom - procentferomonu;
+                    float procentferomonu = (float) punkty[i].ferom/2;
+                    //procentferomonu=Math.round(procentferomonu);
+                    double roundOff = Math.round(procentferomonu*100.0)/100.0; // odcięcie tezaokrąglenie do dwóch po przecinku
+                    //System.out.println(roundOff);
+                    punkty[i].ferom = punkty[i].ferom - roundOff; // odjęcie reszty poza tym co jest do dwóch po przecinku.
 
                 }
             }
@@ -48,7 +50,7 @@ public int lp;         // liczba punkt�w �wiata
                 System.out.print((char) punkty[i].name + "   ");
             System.out.println();
             for (int i = 0; i < lp; i++)
-                System.out.print((int) punkty[i].ferom + "   ");
+                System.out.print((float) punkty[i].ferom + "   ");
             System.out.println();
         }
 

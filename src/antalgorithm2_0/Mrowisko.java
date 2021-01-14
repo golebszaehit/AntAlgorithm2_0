@@ -38,7 +38,6 @@ public class Mrowisko {
         for (int i = 0; i < lmr; i++) {
 
                 ants[i].akcja();
-
         }
     }
 
