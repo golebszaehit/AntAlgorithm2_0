@@ -94,23 +94,18 @@ public class Mrowka {
                sciezka+=polozenie;
                break;
        case 0:
-           //if (swiat.hmfood>0) {syta=true;}
+           if (swiat.hmfood>0) {
+               syta=true;}
+           if (swiat.hmfood>=1){
+               swiat.hmfood = swiat.hmfood-1;}
 
 
-           syta=true;
-           //polozenie=swiat.food;
 
-
-               //if (swiat.hmfood>=1)
-                  // swiat.hmfood = swiat.hmfood-1;
            polozenie=swiat.food;
            sciezka+=polozenie;
            polej_sciezke();
            sciezka="";
-           polej_sciezke();
            polozenie=swiat.home;
-
-
 
            /*polozenie=swiat.home;*/
            System.out.println(sciezka+=polozenie);
@@ -119,7 +114,7 @@ public class Mrowka {
            break;
 
      }
-    }
+    }git
     void polej_sciezke() {
         // akcja wykonywana na punktach świata należących
         // do ścieżki tej mrówki, która doszła do pokarmu
@@ -130,8 +125,15 @@ public class Mrowka {
         }
     }
     public void pokaz(){
-        if(syta)System.out.print("syta ");else System.out.print("     ");
+        if(sciezka.length() == 1){
+            System.out.print("");
+            if(syta){
+                System.out.print("syta");
+            }
+        }else{
+            System.out.print("     ");
+        }
         System.out.printf("%7s %2d",sciezka,sciezka.length());
         System.out.println();
-    }    
+    }
 }
