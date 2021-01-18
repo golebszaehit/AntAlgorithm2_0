@@ -34,26 +34,26 @@ public int lp;         // liczba punkt�w �wiata
         public void ferom_reset(){
             // zeruje ilo�� foremonu we wszystkich punktach �wiata// pomniejsza ilość feromonu we wszystkich punktach świata.
             for(int i=0;i<lp;i++) {
-                System.out.println("punkt: " + punkty[i].name + " | " + "feromon: " + punkty[i].ferom);
-                //System.out.println(punkty[i].ferom);
-                //System.out.println("feromon " + punkty[i].ferom);
+                System.out.println(punkty[i].name + " " + punkty[i].ferom);
                 if (i == punkty[i].ferom || i < punkty[i].ferom) {
-                    float procentFeromonu = (float) punkty[i].ferom/2;
-                    //procentFeromonu=Math.round(procentFeromonu);
-                    System.out.println("liczba " + procentFeromonu);
-                    //System.out.println("ferotm " + i);
-                    punkty[i].ferom = punkty[i].ferom - procentFeromonu;
+                    float procentferomonu = (float) punkty[i].ferom/2;
+                    //procentferomonu=Math.round(procentferomonu);
+                    double roundOff = Math.round(procentferomonu*100.0)/100.0; // odcięcie tezaokrąglenie do dwóch po przecinku
+                    //System.out.println(roundOff);
+                    punkty[i].ferom = punkty[i].ferom - roundOff; // odjęcie reszty poza tym co jest do dwóch po przecinku.
                 }
             }
         }
-        public void pokaz( ){
+        public void pokaz () {
             System.out.println();
-            for(int i=0;i<lp;i++)
-              System.out.print(punkty[i].name+"   ");
+            for (int i = 0; i < lp; i++)
+                System.out.print((char) punkty[i].name + "   ");
             System.out.println();
-            for(int i=0;i<lp;i++)
-              System.out.print(punkty[i].ferom+"   ");
+            for (int i = 0; i < lp; i++)
+                System.out.print((float) punkty[i].ferom + "   ");
             System.out.println();
-        }    
-}
+        }
+
+    }
+
 

@@ -89,27 +89,33 @@ public class Mrowka {
         // jeśli TAK - dodaje do każdego punktu  na ścieżce feromon,
         //             i "usypia" mrówkę za pomocą "syta=true"
         int index=wybierz_punkt();
-        int valor=(swiat.aux[index].name!=(swiat.food))?1:0;
-        switch (valor) {
-            case 1:
-                polozenie=swiat.aux[index].name;
-                sciezka+=polozenie;
-                break;
-            case 0:
-                syta=true;
-                /*sciezka="";
-                polej_sciezke();
-                polozenie=swiat.home;*/
-                polozenie=swiat.food;
-                sciezka+=polozenie;
-                polej_sciezke();
-                sciezka="";
-                polozenie=swiat.home;
-                System.out.println(sciezka+=polozenie);
-                break;
-       }
-    }
+     int valor=(swiat.aux[index].name!=(swiat.food))?1:0;
+     switch (valor)
+     { case 1: polozenie=swiat.aux[index].name;
+               sciezka+=polozenie;
+               break;
+       case 0:
+           if (swiat.hmfood>0) {
+               syta=true;}
+           if (swiat.hmfood>=1){
+               swiat.hmfood = swiat.hmfood-1;}
 
+
+
+           polozenie=swiat.food;
+           sciezka+=polozenie;
+           polej_sciezke();
+           sciezka="";
+           polozenie=swiat.home;
+
+           /*polozenie=swiat.home;*/
+           System.out.println(sciezka+=polozenie);
+           //System.out.println(swiat.hmfood);
+
+           break;
+
+     }
+    }
     void polej_sciezke() {
         // akcja wykonywana na punktach świata należących
         // do ścieżki tej mrówki, która doszła do pokarmu
@@ -120,8 +126,15 @@ public class Mrowka {
         }
     }
     public void pokaz(){
-        if(syta)System.out.print("syta ");else System.out.print("     ");
+        if(sciezka.length() == 1){
+            System.out.print("");
+            if(syta){
+                System.out.print("syta");
+            }
+        }else{
+            System.out.print("     ");
+        }
         System.out.printf("%7s %2d",sciezka,sciezka.length());
         System.out.println();
-    }    
+    }
 }
