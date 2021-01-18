@@ -34,13 +34,13 @@ public int lp;         // liczba punkt�w �wiata
         public void ferom_reset(){
             // zeruje ilo�� foremonu we wszystkich punktach �wiata// pomniejsza ilość feromonu we wszystkich punktach świata.
             for(int i=0;i<lp;i++) {
-                //System.out.println("punkt: " + punkty[i].name + " | " + "feromon: " + punkty[i].ferom);
+                System.out.println("punkt: " + punkty[i].name + " | " + "feromon: " + punkty[i].ferom);
                 //System.out.println(punkty[i].ferom);
                 //System.out.println("feromon " + punkty[i].ferom);
                 if (i == punkty[i].ferom || i < punkty[i].ferom) {
                     float procentFeromonu = (float) punkty[i].ferom/2;
-                    procentFeromonu=Math.round(procentFeromonu);
-                    //System.out.println("liczba " + procentFeromonu);
+                    //procentFeromonu=Math.round(procentFeromonu);
+                    System.out.println("liczba " + procentFeromonu);
                     //System.out.println("ferotm " + i);
                     punkty[i].ferom = punkty[i].ferom - procentFeromonu;
                 }
