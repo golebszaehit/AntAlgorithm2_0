@@ -3,7 +3,7 @@ package antalgorithm2_0;
 public class AntAlgorithm2_0 {
 
     public static void main(String[] args) {
-       World world=new World(7,'a','g',2);
+       World world=new World(7,'a','g',2, 7);
       // parametry świata: liczba punktów, home, food,
       //                   liczba punktów wyboru dla mrówek
       // Uwaga: Minimalna liczba punktów wyboru to dwa.
